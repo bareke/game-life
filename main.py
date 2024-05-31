@@ -48,7 +48,16 @@ class GameOfLife:
                     if with_progress:
                         color = COLOR_ALIVE_NEXT
 
-            pygame.draw.rect(self.screen, color, (col * self.cell_size, row * self.cell_size, self.cell_size - 1, self.cell_size - 1))
+            pygame.draw.rect(
+                self.screen,
+                color,
+                (
+                    col * self.cell_size,
+                    row * self.cell_size,
+                    self.cell_size - 1,
+                    self.cell_size - 1
+                )
+            )
 
         self.cells = updated_cells
 
